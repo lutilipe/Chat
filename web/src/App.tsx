@@ -1,5 +1,6 @@
 import React from 'react'
 import io from 'socket.io-client'
+import Routes from './routes'
 
 const socket = io('http://localhost:3333')
 
@@ -8,11 +9,7 @@ socket.on('connect', () => {
 })
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
-  )
+  return <Routes />
 }
 
 export default App
